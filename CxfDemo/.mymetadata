@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CxfDemo"
+  id="myeclipse.1468208314329"
+  context-root="/CxfDemo"
+  j2ee-spec="6.0"
+  archive="CxfDemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
