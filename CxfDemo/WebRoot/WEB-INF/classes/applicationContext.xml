@@ -7,24 +7,32 @@
              http://www.springframework.org/schema/beans/spring-beans.xsd
              http://cxf.apache.org/jaxws 
              http://cxf.apache.org/schemas/jaxws.xsd">
-
+             
       <import resource="classpath:META-INF/cxf/cxf.xml"/>
       <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
       <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
-
       <jaxws:endpoint 
              id="helloWorld"
              implementor="com.hsy.server.HelloWorldImpl" 
              address="/helloWorld">
+             <!--  
+             wsdlLocation="http://localhost:8080/
+             CxfDemo/webservice/helloWorld?wsdl" 
+             -->
 		</jaxws:endpoint>
-     <bean id="client" 
-     		class="com.hsy.server.HelloWorld" 
-     		factory-bean="clientFactory" 
-     		factory-method="create"/>
+		<!-- 这样可以使用 就是会报错 
+		<jaxws:client id="client" address="http://localhost:8080/CxfDemo/webservice/helloWorld"
+		serviceClass="com.hsy.server.HelloWorld"></jaxws:client>
+		-->
+		<!--
+		
+     <bean id="client" class="com.hsy.server.HelloWorld" 
+     factory-bean="clientFactory" factory-method="create"/>
 
      <bean id="clientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
             <property name="serviceClass" value="com.hsy.server.HelloWorld"/>
-            <property name="address" value="http://localhost:8080/cxf/webservice/helloWorld"/>
+            <property name="address" 
+            value="http://localhost:8080/CxfDemo/webservice/helloWorld"/>
      </bean>
-     
+      -->
 </beans>

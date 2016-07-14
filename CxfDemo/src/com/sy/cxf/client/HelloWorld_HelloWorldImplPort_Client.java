@@ -19,12 +19,12 @@ import javax.xml.namespace.QName;
  * 
  */
 public final class HelloWorld_HelloWorldImplPort_Client {
-
+	
     private static final QName SERVICE_NAME = new QName("http://server.hsy.com/", "HelloWorld");
-
+    
     private HelloWorld_HelloWorldImplPort_Client() {
+    	
     }
-
     public static void main(String args[]) throws java.lang.Exception {
         URL wsdlURL = HelloWorld_Service.WSDL_LOCATION;
         if (args.length > 0 && args[0] != null && !"".equals(args[0])) { 

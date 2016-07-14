@@ -34,7 +34,8 @@ public class HelloWorld_Service extends Service {
         try {
             url = new URL("http://localhost:8080/CxfDemo/webservice/helloWorld?wsdl");
         } catch (MalformedURLException e) {
-            System.err.println("Can not initialize the default wsdl from http://localhost:8080/CxfDemo/webservice/helloWorld?wsdl");
+            System.err.println("Can not initialize the default wsdl" +
+            		" from http://localhost:8080/CxfDemo/webservice/helloWorld?wsdl");
             // e.printStackTrace();
         }
         WSDL_LOCATION = url;
